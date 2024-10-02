@@ -1,0 +1,30 @@
+<h2>Edit your profile </h2>
+
+<form action="/profile/<%= user.id%>?_method=put" method ="post">
+    <p>
+        <label for="">User Name</label>
+        <input type="text" name = "user_name">
+    </p>
+    <p>
+        <label for="">Profile Picture URL</label>
+        <input type="text" name ="profile_pic">
+    </p>
+    <p>
+        <label for="">Pet Picture URL</label>
+        <input type="text" name ="pet_pic">
+    </p>
+    <div>
+        <label for="category">I joined FetchMate to:</label>
+            <select id="category">
+                <option value="socialize">Socialize my dog</option>
+                <option value="meet_owners">Meet other pet owners</option>
+                <option value="puppies">Breeding opportunities</option>
+                <option value="vet">Vet hook-ups</option>
+                <option value="events">Advertise pet events</option>
+                <option value="parks">Show off dog parks</option>
+                <option value="shops">Shout out local Pet shops</option>
+                <option value="all">All of the cool features</option>
+            </select>
+    </div>
+    <button>Update</button>
+</form>

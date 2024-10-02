@@ -1,0 +1,17 @@
+<h2>Highly recommended local Veterinarian offices</h2>
+
+<% for (place of places){%>
+
+
+    <div class="ui-card">
+        <h2><%= place.name %></h2>
+        <img src="<%= place.store_pic%>" alt="">
+        <p>
+            <%= place.location %>
+        </p>
+    
+        <p>
+            posted by: <%= place.user_id %>
+        </p>
+    </div>
+<%}%>

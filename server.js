@@ -24,6 +24,8 @@ const userRouter = require('./routes/user_router')
 const commentRouter = require('./routes/comment_router')
 const eventRouter = require('./routes/event_router.js')
 const profileRouter = require('./routes/profile_router.js')
+const shopnparkRouter = require('./routes/shopnpark_router.js')
+const vetRouter = require('./routes/vet_router.js')
 
 app.set('view engine', 'ejs')
 
@@ -52,9 +54,13 @@ app.use(userRouter)
 
 app.use(sessionRouter)
 
-app.use(ensureLoggedIn)
+app.use(shopnparkRouter)
+
+app.use(vetRouter)
 
 app.use(eventRouter)
+
+app.use(ensureLoggedIn)
 
 app.use(profileRouter)
 

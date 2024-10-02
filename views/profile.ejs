@@ -1,3 +1,5 @@
+
+
 <h1><%= user.user_name %></h1>
 
 
@@ -17,4 +19,14 @@
     I joined FetchMate to: <%= user.category%>
 </p>
 
+
+<div class="edit_delete">
+    <form action="/profile/<%=user.id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+    <form action="/profile/<%=user.id%>/edit">
+        <button type="submit">Edit Profile</button>
+      </form>
+
+</div>
 

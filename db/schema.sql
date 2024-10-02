@@ -28,8 +28,35 @@ CREATE TABLE comments(
     user_id INTEGER,
     post_id INTEGER
 );
+CREATE TABLE snp(
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    store_pic TEXT,
+    services TEXT,
+    location TEXT NOT NULL,
+    rating INTEGER,
+    user_id INTEGER
+);
 
+CREATE TABLE vets(
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    store_pic TEXT,
+    location TEXT NOT NULL,
+    user_id INTEGER
+);
 
+INSERT INTO vets (name, store_pic, location, user_id)
+VALUES ('Jet City Animal Clinic', 'https://jetcityanimalclinic.com/wp-content/uploads/2024/03/IMG_1325.jpg', '822 12th Ave, Seattle, WA 98122, United States', 2);
+
+INSERT INTO snp (name, store_pic, services, location, rating, user_id)
+VALUES ('MudBay', 'https://s3-media0.fl.yelpcdn.com/bphoto/tVmP-bGW1DJm_XT1mpIbSw/1000s.jpg','Pet supplies', '8532 1st Ave NW, Seattle, WA 98117, United States', 4, 1);
+
+INSERT INTO snp (name, store_pic, services, location, rating, user_id)
+VALUES ('Wag N` Wash', 'https://s3-media0.fl.yelpcdn.com/bphoto/vVoPzdYzrDGff-tab9wNwg/348s.jpg', 'Pet Grooming','1932 Queen Anne Ave N, Seattle, WA 98109, United States, United States', 5, 2);
+
+INSERT INTO snp (name, store_pic, services, location, rating, user_id)
+VALUES ('Dogwood Play Park ', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs5bLFTUFrgHmoQsy_W5d00Y5jLTOA5gpFrA&s', 'Dog Park','12568 33rd Ave NE, Seattle, WA 98125, United States, United States', 3, 2);
 
 
 
