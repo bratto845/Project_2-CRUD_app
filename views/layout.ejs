@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+   
+    <header>
+        <h1 class ="brand_name">FetchMate</h1>
+        <span class="login">
+                <% if(isLoggedIn){ %>
+                    <p>Logged in as <%= currentUser.email%></p>
+                    <form action="/session?_method=delete" method="post">
+                        <button>Logout</button>
+                    </form>
+                <%} else {%>
+                    <form action="/login" method = "get">
+                        <button>Login</button>
+                    </form>
+                <%}%>
+            
+            <form action="/new_user">
+                <button>Sign up</button>
+            </form>
+        </span>
+    </header>
+  <nav>
+    <ul class="nav_bar">
+    <li><a href="/">Home Page</a></li>
+    <li><a href="/events">Events</a></li>
+    <li><a href="/shops&parks">Shops & Parks</a></li>
+    <li><a href="/vets">Local Vets</a></li>
+    <% if(isLoggedIn){ %>
+        <li><a href="/profile/<%= currentUser.id%>">Profile</a></li>
+    <%} else {%>
+        <li><a href="/login">Profile</a></li>
+    <%}%>
+    
+    </ul>
+  </nav>
+  <% if(isLoggedIn){%>
+    <a href="/posts/new">Post..</a>
+    <%}%>
+    <%- body %>
+
+    <footer>
+        &copy; 2024
+    </footer>
+</body>
+</html>

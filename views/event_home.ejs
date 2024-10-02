@@ -1,0 +1,14 @@
+<h2>All Events</h2>
+
+<% for (event of events){%>
+
+
+    <div class="ui-card">
+        <h2>
+            <a href="/events/<%= event.id %>">
+            <%= event.event_title %>
+            </a>
+        </h2>
+        <img src="<%= event.image_url%>" alt="">
+    </div>
+<%}%>

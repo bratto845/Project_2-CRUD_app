@@ -1,0 +1,25 @@
+<h2>Update post</h2>
+
+<form action="/posts/<%= post.id%>?_method=put" method ="post">
+    <label for="">title</label>
+    <input type="text" name ="title" value="<%= post.title %>">
+
+    <label for="">image url</label>
+    <input type="text" name ="image_url" value="<%= post.image_url%>">
+
+    <label for="">description</label>
+    <textarea name="description" id=""><%= post.description%></textarea>
+    <div>
+        <label for="category">My post's objective is to:</label>
+        <select id="category">
+          <option value="socialize">Socialize my dog</option>
+          <option value="meet_owners">Meet other pet owners</option>
+          <option value="puppies">Breeding opportunities</option>
+          <option value="vet">Vet hook-ups</option>
+          <option value="events">Advertise pet events</option>
+          <option value="parks">Show off dog parks</option>
+          <option value="shops">Shout out local Pet shops</option>
+        </select>
+      </div>
+    <button>update</button>
+</form>

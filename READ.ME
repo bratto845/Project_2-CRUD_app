@@ -1,0 +1,8 @@
+ <% if(isLoggedIn){ %>
+        <p>Logged in as <%= currentUser.email%></p>
+        <form action="/session?_method=delete" method="post">
+            <button>Logout</button>
+        </form>
+    <%} else {%>
+        <a href="/login"></a>
+    <%}%>

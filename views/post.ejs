@@ -1,0 +1,36 @@
+
+<h2><%= post.title %></h2>
+<h3>User : <%= user.email %></h3>
+
+<img src="<%= post.image_url%>" alt="">
+
+<h3><%= post.description%></h3>
+<form action="/posts/<%=post.id%>?_method=DELETE" method="POST">
+  <button type="submit">Delete <%= post.name %></button>
+</form>
+<button><a href="/posts/<%= post.id %>/edit">Edit Post</a></button>
+
+<form action="/comments" method="post">
+  <input type="hidden" name= "post_id" value = "<%= post.id %>">
+
+  <p>
+    <label for="">Post a comment below</label>
+  </p>
+  <p>
+    <textarea name="content" id=""></textarea>
+  </p>
+  <p>
+    <button>post comment</button>
+  </p>
+</form>
+
+
+
+<h2>Comments</h2>
+
+<% for(let comment of comments){%>
+
+  <p><%= comment.content%></p>
+  <p><%= comment.email%></p>
+
+<% } %>

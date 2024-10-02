@@ -1,0 +1,29 @@
+
+
+<h3>Home page</h3>
+
+<section class="cards">
+    <% for (post of posts){%>
+
+
+        <div class="post-card">
+            <header>
+                <img  class= "avatar" src="https://www.shutterstock.com/image-vector/default-avatar-icon-vector-social-260nw-2180009415.jpg" alt=""> 
+                <span class=" username">Mia</span>
+                <span>time</span>
+            </header>
+            <h2>
+                <a href="/posts/<%= post.id %>">
+                <%= post.title %>
+                </a>
+            </h2>
+            <img class= "card_img" src="<%= post.image_url%>" alt="">
+
+            <footer>
+                <span>left</span>
+                <span>right</span>
+            </footer>
+        </div>
+    <%}%>
+
+</section>
