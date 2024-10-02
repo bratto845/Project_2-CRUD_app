@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "db:build": "node ./db/create_dummy_user.js",
+    "dev": "nodemon server.js"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",

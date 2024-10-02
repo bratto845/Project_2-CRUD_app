@@ -66,7 +66,12 @@ router.delete("/profile/:profileId", ensureLoggedIn, (req, res) => {
       if (err) {
         console.log(err);
       }
-      res.redirect('/')
+        req.session.destroy((err)=>{
+            if(err){
+                console.log(err);
+            }
+            res.redirect('/')
+        })
     })
 });
 module.exports = router

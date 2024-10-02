@@ -83,7 +83,7 @@ CREATE TABLE events(
     location TEXT NOT NULL,
     description TEXT,
     category TEXT NOT NULL,
-    attendees TEXT
+    attendees TEXT  --chnage to foriegn key (users_id) array of attendies?
     );
 
 INSERT INTO events (user_id, event_title, image_url, location, description, category) VALUES (1, 'Jijis Birthday Party', 'https://www.ifyougiveablondeakitchen.com/wp-content/uploads/2019/09/pumpkin-dog-cake-recipe-cover-image-09.2019-500x375.jpg', 'Washington state park', 'Join us for Jijis birthday party at the doggie park', 'socialize');
