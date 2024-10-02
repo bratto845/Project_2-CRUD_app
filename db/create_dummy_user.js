@@ -20,6 +20,7 @@ bcrypt.genSalt(saltRounds, (err, salt)=>{
         db.query(sql, (err, result) => {
             if (err){
                 console.log(err);
+                return;
             }
             const user = result.rows[0]
             console.log(user);

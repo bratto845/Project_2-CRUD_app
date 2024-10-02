@@ -11,7 +11,7 @@ const db = require('./db')
 
 
 const app = express()
-const port = 8080
+const port = process.env.PORT || 8080
 
 const requestlogger= require ('./middlewares/request_logger.js') 
 const setCurrentUser = require('./middlewares/set_current_user.js')
