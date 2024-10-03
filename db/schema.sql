@@ -95,7 +95,7 @@ ALTER TABLE users ADD COLUMN user_name TEXT;
 UPDATE users set category = 'breeding opportunities' where id = 1;
 UPDATE users set category = 'socialize my dog' where id = 2;
 UPDATE users set profile_pic = 'https://play-lh.googleusercontent.com/3Fsib84emmZzNBKV0baMOEtK3lIwqTvxaw_0m6dMWJbtf0d6yirIx6vgvbi6KiqI7qk=w526-h296-rw' where id = 1;
-UPDATE users set profile_pic = 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' where id = 2;
+UPDATE users set profile_pic = 'https://thumbs.dreamstime.com/z/businessman-avatar-image-beard-hairstyle-male-profile-vector-illustration-178545831.jpg' where id = 2;
 
 UPDATE users set pet_pic = 'https://media-be.chewy.com/wp-content/uploads/2021/04/11150033/Border-Collie-1306159446-921x615.jpg' where id = 1;
 UPDATE users set pet_pic = 'https://media.4-paws.org/1/e/d/6/1ed6da75afe37d82757142dc7c6633a532f53a7d/VIER%20PFOTEN_2019-03-15_001-2886x1999-1920x1330.jpg' where id = 2;
@@ -112,6 +112,6 @@ ON user_id = users.id;
 SELECT * FROM events FULL OUTER JOIN users 
 ON user_id = users.id;
 
-INSERT INTO events (user_id, event_title, image_url, location, description, category) VALUES (2, 'tiny ones', 'https://hips.hearstapps.com/hmg-prod/images/beautiful-yorkshire-terrier-playing-with-a-ball-on-royalty-free-image-1724685261.jpg?crop=1xw:0.84415xh;center,top', 'Washington state park', 'small dogs club', 'socialize');
-INSERT INTO events (user_id, event_title, image_url, location, description, category) VALUES (1, 'Aussies', 'https://www.akc.org/wp-content/uploads/2018/05/Three-Australian-Shepherd-puppies-sitting-in-a-field.jpg', 'Washington state park', 'big boys play time', 'socialize');
-INSERT INTO events (user_id, event_title, image_url, location, description, category) VALUES (2, 'jijis b day', 'https://www.ifyougiveablondeakitchen.com/wp-content/uploads/2019/09/pumpkin-dog-cake-recipe-cover-image-09.2019-500x375.jpg', 'Washington state park', 'Join us for Jijis birthday party at the doggie park', 'socialize');
+INSERT INTO events (user_id, event_title, image_url, location, description, category) VALUES (2, 'Tiny ones', 'https://hips.hearstapps.com/hmg-prod/images/beautiful-yorkshire-terrier-playing-with-a-ball-on-royalty-free-image-1724685261.jpg?crop=1xw:0.84415xh;center,top', 'University park', 'small dogs club', 'socialize');
+INSERT INTO events (user_id, event_title, image_url, location, description, category) VALUES (1, 'Aussies', 'https://www.akc.org/wp-content/uploads/2018/05/Three-Australian-Shepherd-puppies-sitting-in-a-field.jpg', 'Mt.Reineer state park', 'big boys play time', 'socialize');
+INSERT INTO events (user_id, event_title, image_url, location, description, category) VALUES (2, 'jijis b day', 'https://www.ifyougiveablondeakitchen.com/wp-content/uploads/2019/09/pumpkin-dog-cake-recipe-cover-image-09.2019-500x375.jpg', 'Washington state park', 'Join us for Jijis birthday party at the doggie park', 'socialize'); 

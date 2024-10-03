@@ -9,13 +9,13 @@
 <% for (event of events){%>
     <div class="post-container">
         <header class="user-profile">
-            <img class= "avatar" src="<%=post.profile_pic%>" alt=""> 
+            <img class= "avatar" src="<%=event.profile_pic%>" alt=""> 
     
             <a class="post-title-event" href="/events/<%= event.id %>">
                 <%= event.event_title %>
             </a>
             <div class="right-side">
-                <h3><%= post.user_name%></h3>
+                <h3><%= event.user_name%></h3>
                 <small>Oct 9 2024</small>
             </div>
         </header>

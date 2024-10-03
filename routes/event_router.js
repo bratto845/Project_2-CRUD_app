@@ -10,7 +10,9 @@ router.get('/events/new', ensureLoggedIn, (req,res) => {
 router.get('/events', (req,res)=>{
     console.log(req.session.userId);
     
-    db.query('SELECT * FROM events;',(err,result)=>{
+    let sql ='SELECT * FROM events FULL OUTER JOIN users ON user_id = users.id;'
+
+    db.query(sql,(err,result)=>{
         if(err){
             console.log(err);
         } 
@@ -62,7 +64,7 @@ router.get('/events/:id', (req,res)=>{
       }
 
       res.redirect('/events')
-    })
+    }) 
 });
 
 router.get('/events/:eventId/edit', ensureLoggedIn, (req, res)=>{

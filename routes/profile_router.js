@@ -27,7 +27,6 @@ router.get('/profile/:profileId/edit', ensureLoggedIn, (req, res)=>{
      db.query(sql, [req.params.profileId], (err,result)=>{ 
          if(err){
              console.log(err);
-             
          }
          let profile = result.rows[0]
          res.render('update_profile', {profile})

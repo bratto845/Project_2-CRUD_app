@@ -35,7 +35,7 @@ router.get('/posts/:id', (req,res)=>{
         if(err){
             console.log(err);  
         }
-        let post = result.rows[0]
+        let post = result.rows[0] 
         db.query(`SELECT * FROM users WHERE ID = $1;`, [post.user_id], (err,result)=>{
             if(err){
                 console.log(err);
@@ -85,7 +85,6 @@ router.get('/posts/:postId/edit', ensureLoggedIn, (req, res)=>{
     db.query(sql, [req.params.postId], (err,result)=>{ 
         if(err){
             console.log(err);
-            
         }
         let post = result.rows[0]
         res.render('edit_form', {post})
@@ -103,7 +102,7 @@ router.put('/posts/:postId', ensureLoggedIn, (req, res) => {
     SET title = $1, 
     image_url = $2, 
     description = $3
-    WHERE id = $4
+    WHERE id = $4;
     `
     db.query(sql, [title, imageUrl, description, postId], (err,result)=>{
         if(err){
