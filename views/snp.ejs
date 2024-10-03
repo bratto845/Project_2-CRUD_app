@@ -1,21 +1,28 @@
-<h2>Check out some local spots!</h2>
 
+<h2 class="page-header">
+    <div class="event-header-text">
+        <p>Check out some local spots!</p>
+    </div>
+</h2>
 <% for (place of places){%>
 
 
-    <div class="ui-card">
-        <h2><%= place.name %></h2>
+    <div class="shop-card">
+        <header class="shop-banner">
+            <h3><%= place.name %></h3>
+        </header>
         <img src="<%= place.store_pic%>" alt="">
 
-        <h3><%= place.services%></h3>
-        <p>
+        <h3 class="shop-name"><%= place.services%></h3>
+        <small>
             <%= place.location %>
-        </p>
-        <p>
-            This location is rated at : <%= place.rating %>
-        </p>
-        <p>
-            posted by: <%= place.user_id %>
-        </p>
+        </small>
+       <footer>
+            <span class="footer-text"> This location is rated at <%= place.rating %> stars⭐️
+            </span>
+            <span class="footer-text">
+                Posted by: <%= place.user_id %>
+            </span>
+        </footer>
     </div>
 <%}%>

@@ -1,29 +1,35 @@
+<% for (post of posts){%>
+    <div class="post-container">
+        <header class="user-profile">
+            <img  class= "avatar" src="<%=post.profile_pic%>" alt=""> 
 
-
-<h3>Home page</h3>
-
-<section class="cards">
-    <% for (post of posts){%>
-
-
-        <div class="post-card">
-            <header>
-                <img  class= "avatar" src="https://www.shutterstock.com/image-vector/default-avatar-icon-vector-social-260nw-2180009415.jpg" alt=""> 
-                <span class=" username">Mia</span>
-                <span>time</span>
-            </header>
-            <h2>
-                <a href="/posts/<%= post.id %>">
+            <a class= "post-title" href="/posts/<%= post.id %>">
                 <%= post.title %>
-                </a>
-            </h2>
+            </a>
+            <div class="right-side">
+                <h3><%= post.user_name%></h3>
+                <small>Oct 10 2024</small>
+            </div>
+        </header>
+        <div>
+            
             <img class= "card_img" src="<%= post.image_url%>" alt="">
-
-            <footer>
-                <span>left</span>
-                <span>right</span>
-            </footer>
         </div>
-    <%}%>
+        <footer>
+            <span class="footer-text">Like ❤️ </span>
+            <span class="footer-text">Comment</span>
+        </footer>
+    </div>
+<%}%>
 
-</section>
+
+
+
+
+
+
+
+
+
+
+

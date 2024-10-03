@@ -1,34 +1,40 @@
-<h2>Share an event</h2>
-
-<form action="/events" method ="post">
-    <p>
-        <label for="">Title</label>
-        <input type="text" name ="event_title">
-    </p>
-    <p>
-        <label for="">Image url</label>
-        <input type="text" name ="image_url">
-    </p>
-    <p>
-        <label for="">Location</label>
-        <input type="text" name ="location">
-    </p>
-    <p>
-        <label for="">Description</label>
-        <textarea name="description" id=""></textarea>
-    </p>
-    <div>
-        <label for="category">My post's objective is to:</label>
-            <select id="category">
-                <option value="socialize">Socialize my dog</option>
-                <option value="meet_owners">Meet other pet owners</option>
-                <option value="puppies">Breeding opportunities</option>
-                <option value="vet">Vet hook-ups</option>
-                <option value="events">Advertise pet events</option>
-                <option value="parks">Show off dog parks</option>
-                <option value="shops">Shout out local Pet shops</option>
-            </select>
-      </div>
-      
-    <button>Share</button>
-</form>
+<section class="form-page" >
+    <section class="form-container">
+        <div class="title">
+            <p>Share an event</p>
+        </div>
+        <form action="/events" method ="post">
+        <div class="user-details">
+            <div class="input-box">
+                <label class="details" for="">Title</label>
+                <input type="text" name ="event_title">
+            </div>
+            <div class="input-box">
+                <label class="details" for="">Image url</label>
+                <input type="text" name ="image_url">
+            </div>
+            <div class="input-box">
+                <label class="details" for="">Location</label>
+                <input type="text" name ="location">
+            </div>
+            <div class="input-box">
+                <label class="details" for="">Description</label>
+                <textarea name="description" id=""></textarea>
+            </div>
+            <div class="input-box">
+                <label class="details" for="category">My post's objective is to:</label>
+                    <select id="category">
+                        <option value="socialize">Socialize my dog</option>
+                        <option value="meet_owners">Meet other pet owners</option>
+                        <option value="puppies">Breeding opportunities</option>
+                        <option value="vet">Vet hook-ups</option>
+                        <option value="events">Advertise pet events</option>
+                        <option value="parks">Show off dog parks</option>
+                        <option value="shops">Shout out local Pet shops</option>
+                    </select>
+            </div>
+            <button class="form-btn">Share</button>
+        </div>
+        </form>
+    </section>
+</section>

@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+    
     <title>Document</title>
 </head>
 <body>
    
     <header>
         <h1 class ="brand_name">FetchMate</h1>
-        <span class="login">
-                <% if(isLoggedIn){ %>
-                    <p>Logged in as <%= currentUser.email%></p>
-                    <form action="/session?_method=delete" method="post">
-                        <button>Logout</button>
-                    </form>
-                <%} else {%>
-                    <form action="/login" method = "get">
-                        <button>Login</button>
-                    </form>
-                <%}%>
-            
+        <span class="logging_btn">
+            <% if(isLoggedIn){ %>
+                <form action="/session?_method=delete" method="post">
+                    <button>Logout</button>
+                </form>
+            <%}else{%>
+                <form action="/login" method = "get">
+                    <button>Login</button>
+                </form>
+            <%}%>
             <form action="/new_user">
                 <button>Sign up</button>
             </form>
@@ -29,21 +31,26 @@
     </header>
   <nav>
     <ul class="nav_bar">
-    <li><a href="/">Home Page</a></li>
-    <li><a href="/events">Events</a></li>
-    <li><a href="/shops&parks">Shops & Parks</a></li>
-    <li><a href="/vets">Local Vets</a></li>
-    <% if(isLoggedIn){ %>
-        <li><a href="/profile/<%= currentUser.id%>">Profile</a></li>
-    <%} else {%>
-        <li><a href="/login">Profile</a></li>
-    <%}%>
+        <li><a href="/">Home Page</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/shops&parks">Shops & Parks</a></li>
+        <li><a href="/vets">Local Vets</a></li>
+        <% if(isLoggedIn){ %>
+            <li><a href="/profile/<%= currentUser.id%>">Profile</a></li>
+        <%} else {%>
+            <li><a href="/login">Profile</a></li>
+        <%}%>
     
     </ul>
   </nav>
-  <% if(isLoggedIn){%>
-    <a href="/posts/new">Post..</a>
-    <%}%>
+    <nav class="user_nav">
+        <% if(isLoggedIn){%>
+            <a class= "logger" href="/posts/new">Click here to make a new post</a>
+            <span class="logger">
+                Logged in as <%= currentUser.email%>
+            </span>
+        <%}%>
+    </nav>
     <%- body %>
 
     <footer>

@@ -1,27 +1,24 @@
-<h1>Events</h1>
+<h2 class="page-header">
+    <div class="event-header-text">
+        <p>Event Details</p>
+    </div>
+</h2>
 
-<h2><%= event.event_title %></h2>
-
-<p>
+<div class="shop-card">
+    <header class="shop-banner">
+        <h3><%= event.event_title %></h3>
+    </header>
     <img src="<%= event.image_url %>" alt="">
-
-</p>
-
-<p>
-<%= event.location %>
-</p>
-
-<p>
-<%= event.description%>
-</p>
-
-<p>
-    Event type: <%= event.category%>
-</p>
-
-<p>
-<%= event.attendees %>
-</p>
-
-
-
+    <h3 class="shop-name"><%= event.description%></h3>
+    <small>
+        <%= event.location %>
+    </small>
+    <footer>
+        <!-- need to fix -->
+        <span class="footer-text"> Event type: <%= event.category%>
+        </span>
+        <span class="footer-text">
+            <%= event.attendees %>
+        </span>
+    </footer>
+</div>

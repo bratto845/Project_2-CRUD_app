@@ -1,14 +1,30 @@
-<h2>All Events</h2>
+<h2 class="page-header">
+    <div class="event-header-text">
+        <p>All Events</p>
+    </div>
+</h2>
+
+
 
 <% for (event of events){%>
-
-
-    <div class="ui-card">
-        <h2>
-            <a href="/events/<%= event.id %>">
-            <%= event.event_title %>
+    <div class="post-container">
+        <header class="user-profile">
+            <img class= "avatar" src="<%=post.profile_pic%>" alt=""> 
+    
+            <a class="post-title-event" href="/events/<%= event.id %>">
+                <%= event.event_title %>
             </a>
-        </h2>
-        <img src="<%= event.image_url%>" alt="">
+            <div class="right-side">
+                <h3><%= post.user_name%></h3>
+                <small>Oct 9 2024</small>
+            </div>
+        </header>
+        <div>
+            <img class= "card_img" src="<%= event.image_url%>" alt="">
+        </div>
     </div>
 <%}%>
+
+<form action="/events/new">
+    <button>Create an Event </button>
+</form>

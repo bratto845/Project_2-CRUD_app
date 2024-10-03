@@ -1,33 +1,36 @@
-<h2>Share a  post</h2>
-
-<form action="/posts" method ="post">
-    <p>
-        <label for="">Title</label>
-        <input type="text" name ="title">
-    </p>
-    <p>
-        <label for="">image url</label>
-        <input type="text" name ="image_url" >
-    </p>
-    <p>
-        <label for="">description</label>
-        <textarea name="description" id=""></textarea>
-    </p>
-    <p>
-        <div>
-            <label for="category">My post's objective is to:</label>
-            <select id="category">
-                <option value="socialize">Socialize my dog</option>
-                <option value="meet_owners">Meet other pet owners</option>
-                <option value="puppies">Breeding opportunities</option>
-                <option value="vet">Vet hook-ups</option>
-                <option value="events">Advertise pet events</option>
-                <option value="parks">Show off dog parks</option>
-                <option value="shops">Shout out local Pet shops</option>
-            </select>
+<section class="form-page">
+    <div class="form-container">
+        <div class="title">
+            <p>Share a  post</p>
         </div>
-    </p>
-    <p>
-        <button>Post</button>
-    </p>
-</form>
+        <form action="/posts" method ="post">
+        <div class="user-details">
+            <div class="input-box">
+                <label class="details" for="">Title</label>
+                <input type="text" name ="title">
+            </div>
+            <div class="input-box">
+                <label class="details" for="">image url</label>
+                <input type="text" name ="image_url" >
+            </div>
+            <div class="input-box">
+                <label class="details" for="">description</label>
+                <textarea name="description" id=""></textarea>
+            </div>
+            <div class="input-box">
+                <label class="details" for="category"> My post's objective is to:</label>
+                <select id="category">
+                    <option value="socialize">Socialize my dog</option>
+                    <option value="meet_owners">Meet other pet owners</option>
+                    <option value="puppies">Breeding opportunities</option>
+                    <option value="vet">Vet hook-ups</option>
+                    <option value="events">Advertise pet events</option>
+                    <option value="parks">Show off dog parks</option>
+                    <option value="shops">Shout out local Pet shops</option>
+                </select>
+            </div>
+            <button class="form-btn">Post</button>
+        </div>
+        </form>
+    </div>
+</section>

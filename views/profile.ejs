@@ -1,32 +1,43 @@
+<section class= "profile_page">
+    <div class="profile_card">  
+        <div class="profile-pics">      
+            <img src="<%= user.pet_pic %>" class="pet_pic" alt=""> 
+            <img src="<%= user.profile_pic %>" class ="profile_pic" alt="">
+            <h1> <%= user.user_name %></h1>
+            <P>This is me and my dog!</P>
+            <p>FetchMate objective: <%= user.category%></p>
+            <div class="btns">
+                <form action="/profile/<%=user.id%>?_method=DELETE" method="POST">
+                    <button class="dlt_btn" type="submit">Delete</button>
+                </form>
+                <form action="/profile/<%=user.id%>/edit">
+                    <button class="edt_btn" type="submit">Edit Profile</button>
+                </form>
+            </div>
+        </div>
+    
 
+    </div>
+</section>
 
-<h1><%= user.user_name %></h1>
+<div class="post-container"></div>
+    <header class="user-profile">
+        <img  class= "avatar" src="<%=post.profile_pic%>" alt=""> 
 
-
-<p>
-    This is me!
-    <img src="<%= user.profile_pic %>" alt="">
-
-</p>
-
-<p>
-    This is my dog!
-    <img src="<%= user.pet_pic %>" alt="">
-</p>
-
-
-<p>
-    I joined FetchMate to: <%= user.category%>
-</p>
-
-
-<div class="edit_delete">
-    <form action="/profile/<%=user.id%>?_method=DELETE" method="POST">
-        <button type="submit">Delete</button>
-    </form>
-    <form action="/profile/<%=user.id%>/edit">
-        <button type="submit">Edit Profile</button>
-      </form>
-
+        <a class= "post-title" href="/posts/<%= post.id %>">
+            <%= post.title %>
+        </a>
+        <div class="right-side">
+            <h3><%= post.user_name%></h3>
+            <small>Oct 10 2024</small>
+        </div>
+    </header>
+    <div>
+        
+        <img class= "card_img" src="<%= post.image_url%>" alt="">
+    </div>
+    <footer>
+        <span class="footer-text">Like ❤️ </span>
+        <span class="footer-text">Comment</span>
+    </footer>
 </div>
-

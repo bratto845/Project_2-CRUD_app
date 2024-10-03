@@ -1,37 +1,48 @@
-<h2>Become a member of FetchMate's community </h2>
-<h3>Create a profile</h3>
-<form action="/new_user" method = "post">
-    <label for="">Email</label>
-    <input type="text" name="email">
+<section class="form-page">
+    <!-- <span></span> -->
 
-    <p>
-        <label for="">Password</label>
-        <input type="password" name = "password">
-    </p>
-    <p>
-        <label for="">User Name</label>
-        <input type="text" name = "user_name">
-    </p>
-    <p>
-        <label for="">Profile Picture</label>
-        <input type="text" name ="profile_pic">
-    </p>
-    <p>
-        <label for="">Pet Picture</label>
-        <input type="text" name ="pet_pic">
-    </p>
-    <div>
-        <label for="category">I joined FetchMate to:</label>
-            <select id="category">
-                <option value="socialize">Socialize my dog</option>
-                <option value="meet_owners">Meet other pet owners</option>
-                <option value="puppies">Breeding opportunities</option>
-                <option value="vet">Vet hook-ups</option>
-                <option value="events">Advertise pet events</option>
-                <option value="parks">Show off dog parks</option>
-                <option value="shops">Shout out local Pet shops</option>
-                <option value="all">All of the cool features</option>
-            </select>
-    </div>
-    <button>Sign Up</button>
-</form>
+    <section class="form-container">
+        <div class="title">
+            <p>Become a member of FetchMate's community</p>
+            <small>Create a profile</small>
+        </div>
+        <form action="/new_user" method = "post">
+        <div class="user-details">
+            <div class="input-box">
+                <label class="details" for="">Email</label>
+                <input type="text" name="email">
+            </div>
+            <div class="input-box">
+                <label class="details" for="">Password</label>
+                <input type="password" name = "password">
+            </div>
+            <div class="input-box">
+                <label class="details" for="">User Name</label>
+                <input type="text" name = "user_name">
+            </div>
+            <div class="input-box">
+                <label class="details" for="">Profile Picture</label>
+                <input type="text" name ="profile_pic">
+            </div>
+            <div class="input-box">
+                <label class="details" for="">Pet Picture</label>
+                <input type="text" name ="pet_pic">
+            </div>
+            <div class="input-box">
+                <label class="details" for="category">I joined FetchMate to:</label>
+                    <select id="category">
+                        <option value="socialize my dog">Socialize my dog</option>
+                        <option value="meet other pet owners">Meet other pet owners</option>
+                        <option value="breeding opportunities">Breeding opportunities</option>
+                        <option value="vet hook-ups">Vet hook-ups</option>
+                        <option value="advertise events">Advertise pet events</option>
+                        <option value="show off/check out parks">Show off/check out dog parks</option>
+                        <option value="shout out/ check out local pet shops">Shout out/check out local Pet shops</option>
+                        <option value="explore everything">All of the cool features</option>
+                    </select>
+            </div>
+            <button class="form-btn">Sign Up</button>
+        </div>
+        </form>
+    </section>
+</section>  

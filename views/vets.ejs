@@ -1,17 +1,27 @@
-<h2>Highly recommended local Veterinarian offices</h2>
+<h2 class="page-header">
+    <div class="event-header-text">
+        <p>Local Veterinarian offices</p>
+    </div>
+</h2>
 
 <% for (place of places){%>
-
-
-    <div class="ui-card">
-        <h2><%= place.name %></h2>
+    <div class="shop-card">
+        <header class="shop-banner">
+            <h3><%= place.name %></h3>
+        </header>
         <img src="<%= place.store_pic%>" alt="">
-        <p>
+        <h3 class="shop-name">Veterinarian Hospital</h3>
+        <small>
             <%= place.location %>
-        </p>
-    
-        <p>
-            posted by: <%= place.user_id %>
-        </p>
+        </small>
+        <footer>
+            <!-- need to fix -->
+            <span class="footer-text"> This location is rated at 5 stars⭐️ 
+            </span>
+            <span class="footer-text">
+                Posted by: <%= place.user_id %>
+            </span>
+        </footer>
     </div>
 <%}%>
+

@@ -93,8 +93,8 @@ ALTER TABLE users ADD COLUMN pet_pic TEXT;
 ALTER TABLE users ADD COLUMN category TEXT;
 ALTER TABLE users ADD COLUMN user_name TEXT;
 
-UPDATE users set category = 'puppies' where id = 1;
-UPDATE users set category = 'parks' where id = 2;
+UPDATE users set category = 'breeding opportunities' where id = 1;
+UPDATE users set category = 'socialize my dog' where id = 2;
 UPDATE users set profile_pic = 'https://play-lh.googleusercontent.com/3Fsib84emmZzNBKV0baMOEtK3lIwqTvxaw_0m6dMWJbtf0d6yirIx6vgvbi6KiqI7qk=w526-h296-rw' where id = 1;
 UPDATE users set profile_pic = 'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' where id = 2;
 
@@ -102,3 +102,7 @@ UPDATE users set pet_pic = 'https://media-be.chewy.com/wp-content/uploads/2021/0
 UPDATE users set pet_pic = 'https://media.4-paws.org/1/e/d/6/1ed6da75afe37d82757142dc7c6633a532f53a7d/VIER%20PFOTEN_2019-03-15_001-2886x1999-1920x1330.jpg' where id = 2;
 
 UPDATE users set user_name = 'puppies' where id = 1;
+
+SELECT posts.*, users.user_name, users.profile_pic 
+FROM posts 
+JOIN users ON posts.user_id = users.id;

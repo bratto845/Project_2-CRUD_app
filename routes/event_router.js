@@ -4,7 +4,9 @@ const db = require('../db')
 const bcrypt = require('bcrypt')
 const ensureLoggedIn = require('../middlewares/ensure_logged_in')
 
-
+router.get('/events/new', ensureLoggedIn, (req,res) => {
+    res.render('event_form')
+})
 router.get('/events', (req,res)=>{
     console.log(req.session.userId);
     

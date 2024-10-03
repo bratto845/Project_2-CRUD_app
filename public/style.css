@@ -1,57 +1,387 @@
 *{
     box-sizing: border-box;
+    margin: 0;
 }
 body{
-    background-color: mistyrose;
+    background: linear-gradient(135deg, white,#f6ead4);
+    background-size: cover;
+    
 }
 
 img{
     width: 200px;
 }
 
+/* ----------profile page---------------- */
+.profile_page{
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.profile_card{
+    width: 100%;
+    min-height: 100vh;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-pics{
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    background-color: blanchedalmond;
+    color: #607D8B;
+}
+.pet_pic{
+    display: block;
+    width: 100%
+}
+.profile_pic{
+    width: 140px;
+    border-radius: 50%;
+    margin-top: -70px;
+    box-shadow: 0 0 0 3px #FF9800;
+}
+
+.profile-pics h1{
+    font-weight: 600;
+    margin: 5%;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    margin: 5%;
+    /* border: 3px solid #FF9800 ;
+    color: #FFC107; */
+  
+}
+.dlt_btn{
+    background-color: #e98c60;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 5px;
+    border: white 2px;
+    padding: 5px;
+    width: 90px;
+}
+.edt_btn{
+    background-color: #e98c60;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 5px;
+    border: white 2px;
+    padding: 5px;
+    width: 90px;
+}
+/* ----------NAV BAR------------- */
+.brand_name{
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 60px;
+    color: #e4773f;
+}
 header{
-    background-color: lightblue;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/046/791/463/non_2x/cartoon-clouds-background-sky-and-clouds-beautiful-background-stylish-design-with-a-flat-cartoon-poster-flyers-postcards-web-banners-holiday-mood-airy-atmosphere-vector.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 25px;
 }
 
 .nav_bar {
-    list-style-type: none;
+    text-decoration: none;
     margin: 0;
-    padding: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     display: flex; 
-    background-color: white; 
+    background-color: #8BC34A; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .nav_bar li {
-margin-right: 20px; 
+list-style: none;
+display: inline-block;
+}
+.nav_bar li a{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 30px;
+    text-decoration: none;
+}
+.logging_btn button{
+    background-color: #e98c60;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 5px;
+    border: white 2px;
+    padding: 5px;
+    width: 90px;
+}
+.user_nav{
+    text-decoration: none;
+    margin: 0;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between; 
+    background-color: #f2b47c; 
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logger{
+    text-decoration: none;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.post-card{
-    width: 400px;
-    border-radius: 10px;
-    background-color: palegreen;
+/* ------------POSTS BOXES--------------- */
+
+.post-container{
+    width: 60%;
+    display: block;
+    background-color: wheat;
+    border-radius: 6px;
+    padding: 20px;
+    color: skyblue;
+    margin: auto;
+    margin-top: 10%;
 }
-.post-card header{
+.post-container .avatar{
+    width: 70px;
+    border-radius: 50%;
+}
+.user-profile{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white
 }
-.post-card .avatar{
-    width: 50px;
-    border-radius: 50%;
+.user-profile h3{
+    font-size: xx-large;
 }
-.post-card .username{
-    flex-grow: 1;
+.post-title{
+    font-size: 60px;
+    color: white;
+    text-decoration: none;
 }
-.post-card footer{
-    display: flex;
-    justify-content: space-between;
+.post-title-event{
+    font-size: 60px;
+    color: #8BC34A;
+    text-decoration: none;
+    text-shadow: #f6ead4 2px 2px 2px;
 }
-.card_img{
+.user-profile .right-side{
+    text-align: center;
+    
+}
+.post-container .card_img{
     width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: block; 
+    padding: 0;
+}
+.post-container footer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5196b5;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    margin-bottom: 10%;
+}
+.footer-text{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+/* -----------EVENT HOME PAGE ------------*/
+.event-container{
+    width: 60%;
+    display: block;
+    background-color: wheat;
+    border-radius: 6px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 10%;
+}
+.page-header{
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/008/494/428/small/realistic-banner-with-grass-free-png.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.event-header-text{
+    color: #5196B5;
+    font-size: 50px;
+    text-align: center;
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: lighter;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+.event-card h3{
+    font-size: x-large;
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 5%;
+}
+h3 a{
+    background-color: #E98C60;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+.event-card img{
+    display: block;
+    align-items: center;
+    margin: auto;
+    margin-top: 10%;
+    border: dashed #FF9800;
+    width: 80%;
+}
+/*---------------- SNP & vets------------------ */
+.shop-card{
+    width: 60%;
+    display: block;
+    background-color: #f6ead4;
+    border-radius: 6px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 10%;
+}
+.shop-card img{
+    display: block;
+    align-items: center;
+    margin: auto;
+    margin-top: 10%;
+    border: 2px dashed #FF9800;
+    width: 60%;
+}
+.shop-card .shop-banner{
+    font-size: x-large;
+    color: #E98C60;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.shop-card footer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8BC34A;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    margin-top: 3%;
+}
+.shop-card .shop-name{
+    text-align: left;
+    color: #e4773f;
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+.shop-card small{
+    text-align: center;
+    font-size: large;
+}
+.shop-card .footer-text{
+    font-weight: bold;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+/* ---------------- FORMS ------------------ */
+.form-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 100vh;
+}
+.form-container{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 700px;
+    width: 100%;
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 5px;
+   
+}
+.form-container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.form-container .title::before{
+    content: '';
+    position: absolute;
+    left: -10;
+    right: -10;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg,white,#f6ead4);
+}
+.form-container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 -20px);
+    
+}
+.user-details .input-box .details{
+    font-weight: 500;
+    margin-bottom: 5px;
     display: block;
 }
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #E98C60
+}
+.form-btn{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: #5196b5;
+    padding: 2%;
+}
+
 
 @media (min-width: 500px){
     .cards{
