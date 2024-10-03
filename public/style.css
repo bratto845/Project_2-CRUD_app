@@ -159,16 +159,20 @@ display: inline-block;
     color: skyblue;
     margin: auto;
     margin-top: 10%;
+    max-width: 700px;
+    width: 100%;
 }
 .post-container .avatar{
     width: 70px;
     border-radius: 50%;
+    max-width: fit-content;
 }
 .user-profile{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white
+    color: white;
+    
 }
 .user-profile h3{
     font-size: xx-large;
@@ -206,11 +210,9 @@ display: inline-block;
     color: white;
     margin-bottom: 10%;
 }
-.footer-text{
-    margin-left: 50px;
-    margin-right: 50px;
-    
-}
+/* .footer-text{
+   
+} */
 .footer-text button{
     background-color: #e98c60;
     color: white;

@@ -19,17 +19,17 @@
                 <label class="details" for="">description</label>
                 <textarea name="description" id=""><%= post.description%></textarea>
             </div>
-            <div class="input-box">
+            <div class="input-box"></div>
                 <label class="details" for="category">I joined FetchMate to:</label>
-                <select id="category">
-                    <option value="socialize my dog">Socialize my dog</option>
-                    <option value="meet other pet owners">Meet other pet owners</option>
-                    <option value="breeding opportunities">Breeding opportunities</option>
-                    <option value="vet hook-ups">Vet hook-ups</option>
-                    <option value="advertise events">Advertise pet events</option>
-                    <option value="show off/check out parks">Show off/check out dog parks</option>
-                    <option value="shout out/ check out local pet shops">Shout out/check out local Pet shops</option>
-                    <option value="explore everything">All of the cool features</option>
+                <select id="category" name="category" >
+                    <option value="socialize my dog" <%= post.category === "socialize my dog" ? "selected" : "" %> >Socialize my dog</option>
+                    <option value="meet other pet owners" <%= post.category === "meet other pet owners" ? "selected" : "" %> >Meet other pet owners</option>
+                    <option value="breeding opportunities" <%= post.category === "breeding opportunities" ? "selected" : "" %> >Breeding opportunities</option>
+                    <option value="vet hook-ups" <%= post.category === "vet hook-ups" ? "selected" : "" %> >Vet hook-ups</option>
+                    <option value="advertise events" <%= post.category === "advertise events" ? "selected" : "" %> >Advertise pet events</option>
+                    <option value="show off/check out parks" <%= post.category === "show off/check out parks" ? "selected" : "" %> >Show off/check out dog parks</option>
+                    <option value="shout out/ check out local pet shops" <%= post.category === "shout out/ check out local pet shops" ? "selected" : "" %> >Shout out/check out local Pet shops</option>
+                    <option value="all of the cool features" <%= post.category === "all of the cool features" ? "selected" : "" %> >All of the cool features</option>
                 </select>
             </div>
             <button class="form-btn">update</button>

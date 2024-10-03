@@ -3,34 +3,35 @@
         <div class="title">
             <p>Edit your Event</p>
         </div>
-        <form action="/events/<%= event.id%>?_method=put" method ="post">
+        <form action="/events/<%= event.id %>?_method=put" method ="post">
             <div class="user-details">
                 <div class="input-box">
                     <label class="details" for="">Title</label>
-                    <input type="text" name ="event_title">
+                    <input type="text" name ="event_title" value="<%= event.event_title %>">
                 </div>
                 <div class="input-box">
                     <label class="details" for="">Image url</label>
-                    <input type="text" name ="image_url">
+                    <input type="text" name ="image_url" value="<%= event.image_url %>">
                 </div>
                 <div class="input-box">
                     <label class="details" for="">Location</label>
-                    <input type="text" name ="location">
+                    <input type="text" name ="location" value="<%= event.location %>">
                 </div>
                 <div class="input-box">
                     <label class="details" for="">Description</label>
-                    <textarea name="description" id=""></textarea>
+                    <textarea name="description" id="" ><%= event.description %></textarea>
                 </div>
                 <div class="input-box">
-                    <label class="details" for="category">My post's objective is to:</label>
-                    <select name="category" id="category">
-                        <option value="socialize">Socialize my dog</option>
-                        <option value="meet_owners">Meet other pet owners</option>
-                        <option value="puppies">Breeding opportunities</option>
-                        <option value="vet">Vet hook-ups</option>
-                        <option value="events">Advertise pet events</option>
-                        <option value="parks">Show off dog parks</option>
-                        <option value="shops">Shout out local Pet shops</option>
+                    <label class="details" for="category">I joined FetchMate to:</label>
+                    <select id="category" name="category" >
+                        <option value="socialize my dog" <%= event.category === "socialize my dog" ? "selected" : "" %> >Socialize my dog</option>
+                        <option value="meet other pet owners" <%= event.category === "meet other pet owners" ? "selected" : "" %> >Meet other pet owners</option>
+                        <option value="breeding opportunities" <%= event.category === "breeding opportunities" ? "selected" : "" %> >Breeding opportunities</option>
+                        <option value="vet hook-ups" <%= event.category === "vet hook-ups" ? "selected" : "" %> >Vet hook-ups</option>
+                        <option value="advertise events" <%= event.category === "advertise events" ? "selected" : "" %> >Advertise pet events</option>
+                        <option value="show off/check out parks" <%= event.category === "show off/check out parks" ? "selected" : "" %> >Show off/check out dog parks</option>
+                        <option value="shout out/ check out local pet shops" <%= event.category === "shout out/ check out local pet shops" ? "selected" : "" %> >Shout out/check out local Pet shops</option>
+                        <option value="all of the cool features" <%= event.category === "all of the cool features" ? "selected" : "" %> >All of the cool features</option>
                     </select>
                 </div>
                 <button class="form-btn">Update</button>

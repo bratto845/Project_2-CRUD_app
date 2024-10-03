@@ -10,12 +10,12 @@ router.get('/events/new', ensureLoggedIn, (req,res) => {
 router.get('/events', (req,res)=>{
     console.log(req.session.userId);
     
-    let sql ='SELECT * FROM events FULL OUTER JOIN users ON user_id = users.id;'
+    let sql ='SELECT events.*, user_name, profile_pic, pet_pic FROM events JOIN users  ON events.user_id = users.id;'
 
     db.query(sql,(err,result)=>{
         if(err){
             console.log(err);
-        } 
+        }   
         let events = result.rows 
         res.render('event_home', {events})
     })
@@ -49,12 +49,14 @@ router.get('/events/:id', (req,res)=>{
          if(err){
              console.log(err);  
          }
+         console.log(result);
+         
          let event = result.rows[0]
-
-         res.render('event', {event})
+         res.render('event', {event:event})
      })
  })
- router.delete("/events/:eventId", ensureLoggedIn, (req, res) => {
+
+router.delete("/events/:eventId", ensureLoggedIn, (req, res) => {
     const sql = `
       DELETE FROM events WHERE id = $1;
     `
@@ -66,19 +68,19 @@ router.get('/events/:id', (req,res)=>{
       res.redirect('/events')
     }) 
 });
-
 router.get('/events/:eventId/edit', ensureLoggedIn, (req, res)=>{
-const sql = `SELECT * FROM posts WHERE id = $1;`
-
-db.query(sql, [req.params.postId], (err,result)=>{ 
-    if(err){
-        console.log(err);
-        
-    }
-    let post = result.rows[0]
-    res.render('event_edit', {post})
-})
-})
+    const sql = 'SELECT events.*, user_name, profile_pic, pet_pic FROM events JOIN users ON events.user_id = users.id WHERE events.id = $1;'
+    
+        db.query(sql, [req.params.eventId], (err,result)=>{ 
+            if(err){
+                console.log(err);
+            }
+            console.log(result);
+            
+            let event= result.rows[0]
+            res.render('event_edit', {event})
+        })
+    })
 
 router.put('/events/:eventId', ensureLoggedIn, (req, res) => {
     const eventTitle = req.body.event_title

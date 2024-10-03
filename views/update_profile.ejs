@@ -8,27 +8,27 @@
             <div class="user-details">
                 <div class="input-box">
                     <label class="details" for="">User Name</label>
-                    <input type="text" name = "user_name">
+                    <input type="text" name = "user_name" value="<%= profile.user_name %>">
                 </div>
             <div class="input-box">
                 <label class="details" for="">Profile Picture URL</label>
-                <input type="text" name ="profile_pic">
+                <input type="text" name ="profile_pic" value="<%= profile.profile_pic %>">
             </div>
             <div class="input-box">
                 <label class="details" for="">Pet Picture URL</label>
-                <input type="text" name ="pet_pic">
+                <input type="text" name ="pet_pic" value="<%= profile.pet_pic %>">
             </div>
             <div class="input-box">
-            <label class="details" for="category">I joined FetchMate to:</label>
-                <select id="category">
-                    <option value="socialize">Socialize my dog</option>
-                    <option value="meet_owners">Meet other pet owners</option>
-                    <option value="puppies">Breeding opportunities</option>
-                    <option value="vet">Vet hook-ups</option>
-                    <option value="events">Advertise pet events</option>
-                    <option value="parks">Show off dog parks</option>
-                    <option value="shops">Shout out local Pet shops</option>
-                    <option value="all">All of the cool features</option>
+                <label class="details" for="category">I joined FetchMate to:</label>
+                <select id="category" name="category" >
+                    <option value="socialize my dog" <%= profile.category === "socialize my dog" ? "selected" : "" %> >Socialize my dog</option>
+                    <option value="meet other pet owners" <%= profile.category === "meet other pet owners" ? "selected" : "" %> >Meet other pet owners</option>
+                    <option value="breeding opportunities" <%= profile.category === "breeding opportunities" ? "selected" : "" %> >Breeding opportunities</option>
+                    <option value="vet hook-ups" <%= profile.category === "vet hook-ups" ? "selected" : "" %> >Vet hook-ups</option>
+                    <option value="advertise events" <%= profile.category === "advertise events" ? "selected" : "" %> >Advertise pet events</option>
+                    <option value="show off/check out parks" <%= profile.category === "show off/check out parks" ? "selected" : "" %> >Show off/check out dog parks</option>
+                    <option value="shout out/ check out local pet shops" <%= profile.category === "shout out/ check out local pet shops" ? "selected" : "" %> >Shout out/check out local Pet shops</option>
+                    <option value="all of the cool features" <%= profile.category === "all of the cool features" ? "selected" : "" %> >All of the cool features</option>
                 </select>
             </div>
         <button class="form-btn">Update</button>
