@@ -22,9 +22,17 @@
         <div>
             <img class= "card_img" src="<%= event.image_url%>" alt="">
         </div>
+        <footer>
+            <form class="footer-text" action="/events/<%= event.id %>?_method=DELETE" method="POST">
+                <button>Delete</button>
+            </form>
+            <form class="footer-text" action="/events/<%= event.id %>/edit">
+                <button>Edit</button>
+            </form>
+        </footer>
     </div>
 <%}%>
 
-<form action="/events/new">
-    <button>Create an Event </button>
+<form class="form-btn-event" action="/events/new">
+    <button class="form-btn" >Create an Event </button>
 </form>

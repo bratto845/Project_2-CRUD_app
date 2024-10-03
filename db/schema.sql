@@ -82,8 +82,7 @@ CREATE TABLE events(
     image_url TEXT,
     location TEXT NOT NULL,
     description TEXT,
-    category TEXT NOT NULL,
-    attendees TEXT  --chnage to foriegn key (users_id) array of attendies?
+    category TEXT,
     );
 
 INSERT INTO events (user_id, event_title, image_url, location, description, category) VALUES (1, 'Jijis Birthday Party', 'https://www.ifyougiveablondeakitchen.com/wp-content/uploads/2019/09/pumpkin-dog-cake-recipe-cover-image-09.2019-500x375.jpg', 'Washington state park', 'Join us for Jijis birthday party at the doggie park', 'socialize');
@@ -106,3 +105,13 @@ UPDATE users set user_name = 'puppies' where id = 1;
 SELECT posts.*, users.user_name, users.profile_pic 
 FROM posts 
 JOIN users ON posts.user_id = users.id;
+
+SELECT * FROM posts FULL OUTER JOIN users 
+ON user_id = users.id;
+
+SELECT * FROM events FULL OUTER JOIN users 
+ON user_id = users.id;
+
+INSERT INTO events (user_id, event_title, image_url, location, description, category) VALUES (2, 'tiny ones', 'https://hips.hearstapps.com/hmg-prod/images/beautiful-yorkshire-terrier-playing-with-a-ball-on-royalty-free-image-1724685261.jpg?crop=1xw:0.84415xh;center,top', 'Washington state park', 'small dogs club', 'socialize');
+INSERT INTO events (user_id, event_title, image_url, location, description, category) VALUES (1, 'Aussies', 'https://www.akc.org/wp-content/uploads/2018/05/Three-Australian-Shepherd-puppies-sitting-in-a-field.jpg', 'Washington state park', 'big boys play time', 'socialize');
+INSERT INTO events (user_id, event_title, image_url, location, description, category) VALUES (2, 'jijis b day', 'https://www.ifyougiveablondeakitchen.com/wp-content/uploads/2019/09/pumpkin-dog-cake-recipe-cover-image-09.2019-500x375.jpg', 'Washington state park', 'Join us for Jijis birthday party at the doggie park', 'socialize');

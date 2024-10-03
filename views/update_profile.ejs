@@ -1,30 +1,38 @@
-<h2>Edit your profile </h2>
+<section class="form-page">
+    <section class="form-container">
+        <div class="title">
+            <h2>Edit your profile </h2>
+        </div>
 
-<form action="/profile/<%= user.id%>?_method=put" method ="post">
-    <p>
-        <label for="">User Name</label>
-        <input type="text" name = "user_name">
-    </p>
-    <p>
-        <label for="">Profile Picture URL</label>
-        <input type="text" name ="profile_pic">
-    </p>
-    <p>
-        <label for="">Pet Picture URL</label>
-        <input type="text" name ="pet_pic">
-    </p>
-    <div>
-        <label for="category">I joined FetchMate to:</label>
-            <select id="category">
-                <option value="socialize">Socialize my dog</option>
-                <option value="meet_owners">Meet other pet owners</option>
-                <option value="puppies">Breeding opportunities</option>
-                <option value="vet">Vet hook-ups</option>
-                <option value="events">Advertise pet events</option>
-                <option value="parks">Show off dog parks</option>
-                <option value="shops">Shout out local Pet shops</option>
-                <option value="all">All of the cool features</option>
-            </select>
+        <form action="/profile/<%= profile.id%>?_method=put" method ="post">
+            <div class="user-details">
+                <div class="input-box">
+                    <label class="details" for="">User Name</label>
+                    <input type="text" name = "user_name">
+                </div>
+            <div class="input-box">
+                <label class="details" for="">Profile Picture URL</label>
+                <input type="text" name ="profile_pic">
+            </div>
+            <div class="input-box">
+                <label class="details" for="">Pet Picture URL</label>
+                <input type="text" name ="pet_pic">
+            </div>
+            <div class="input-box">
+            <label class="details" for="category">I joined FetchMate to:</label>
+                <select id="category">
+                    <option value="socialize">Socialize my dog</option>
+                    <option value="meet_owners">Meet other pet owners</option>
+                    <option value="puppies">Breeding opportunities</option>
+                    <option value="vet">Vet hook-ups</option>
+                    <option value="events">Advertise pet events</option>
+                    <option value="parks">Show off dog parks</option>
+                    <option value="shops">Shout out local Pet shops</option>
+                    <option value="all">All of the cool features</option>
+                </select>
+            </div>
+        <button class="form-btn">Update</button>
     </div>
-    <button>Update</button>
-</form>
+    </form>
+    </section>
+</section>

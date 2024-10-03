@@ -151,7 +151,7 @@ display: inline-block;
 /* ------------POSTS BOXES--------------- */
 
 .post-container{
-    width: 60%;
+    width: 50%;
     display: block;
     background-color: wheat;
     border-radius: 6px;
@@ -177,6 +177,7 @@ display: inline-block;
     font-size: 60px;
     color: white;
     text-decoration: none;
+    text-shadow: #607D8B 2px 2px 2px;
 }
 .post-title-event{
     font-size: 60px;
@@ -208,7 +209,67 @@ display: inline-block;
 .footer-text{
     margin-left: 50px;
     margin-right: 50px;
+    
 }
+.footer-text button{
+    background-color: #e98c60;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 5px;
+    border: white 2px;
+    padding: 5px;
+    width: 90px;
+}
+.comment-box{
+    max-width: 700px;
+    width: 100%;
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.post-comment{
+    width: 100%;
+}
+.comment-box h3{
+    color: #607D8B;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: x-large;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 5%;
+}
+.comment-section {
+    text-align: right;
+    font-size: large;
+    border:#FF9800 dotted 1px;
+    margin: 20px;
+    
+}
+.com-title{
+    font-size: 25px;
+    font-weight: 500;
+    color:#e4773f;
+    position: relative;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.post-com-btn{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: #f2b47c;
+    padding: 2%;
+    margin-top: 5%;
+}
+
 /* -----------EVENT HOME PAGE ------------*/
 .event-container{
     width: 60%;
@@ -329,7 +390,7 @@ h3 a{
     font-weight: 500;
     position: relative;
 }
-.form-container .title::before{
+/* .form-container .title::before{
     content: '';
     position: absolute;
     left: -10;
@@ -337,7 +398,7 @@ h3 a{
     height: 3px;
     width: 30px;
     background: linear-gradient(135deg,white,#f6ead4);
-}
+} */
 .form-container form .user-details{
     display: flex;
     flex-wrap: wrap;
@@ -381,7 +442,18 @@ form .user-details .input-box{
     background: #5196b5;
     padding: 2%;
 }
-
+.form-btn-event{
+    height: 80%;
+    width: 80%;
+    outline: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: #5196b5;
+    margin: 10%;
+}
 
 @media (min-width: 500px){
     .cards{

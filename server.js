@@ -58,9 +58,9 @@ app.use(shopnparkRouter)
 
 app.use(vetRouter)
 
-app.use(eventRouter)
-
 app.use(ensureLoggedIn)
+
+app.use(eventRouter)
 
 app.use(profileRouter)
 

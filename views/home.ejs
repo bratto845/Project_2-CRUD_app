@@ -16,12 +16,15 @@
             <img class= "card_img" src="<%= post.image_url%>" alt="">
         </div>
         <footer>
-            <span class="footer-text">Like ❤️ </span>
-            <span class="footer-text">Comment</span>
+            <form class="footer-text" action="/posts/<%= post.id %>">
+                <button>Like</button>
+            </form>
+            <form class="footer-text" action="/posts/<%= post.id %>">
+                <button>Comment</button>
+            </form>
         </footer>
     </div>
 <%}%>
-
 
 
 

@@ -1,36 +1,41 @@
 
-<h2><%= post.title %></h2>
-<h3>User : <%= user.email %></h3>
+<div class="post-container">
+  <header class="user-profile">
+      <img  class= "avatar" src="<%=post.profile_pic%>" alt=""> 
 
-<img src="<%= post.image_url%>" alt="">
-
-<h3><%= post.description%></h3>
-<form action="/posts/<%=post.id%>?_method=DELETE" method="POST">
-  <button type="submit">Delete <%= post.name %></button>
-</form>
-<button><a href="/posts/<%= post.id %>/edit">Edit Post</a></button>
-
-<form action="/comments" method="post">
-  <input type="hidden" name= "post_id" value = "<%= post.id %>">
-
-  <p>
-    <label for="">Post a comment below</label>
-  </p>
-  <p>
-    <textarea name="content" id=""></textarea>
-  </p>
-  <p>
-    <button>post comment</button>
-  </p>
-</form>
-
-
-
-<h2>Comments</h2>
-
-<% for(let comment of comments){%>
-
-  <p><%= comment.content%></p>
-  <p><%= comment.email%></p>
-
-<% } %>
+      <a class= "post-title" href="/posts/<%= post.id %>">
+          <%= post.title %>
+      </a>
+      <div class="right-side">
+          <h3><%= post.user_name%></h3>
+          <small>Oct 10 2024</small>
+      </div>
+  </header>
+  <div>
+      
+      <img class= "card_img" src="<%= post.image_url%>" alt="">
+  </div>
+  
+  <div class="comment-box">
+    <h3><%= post.description%></h3>
+    <div class="post-comment">
+      <form action="/comments" method="post">
+        <input type="hidden" name= "post_id" value = "<%= post.id %>">
+        <p>
+          <label class="com-title" for="">Post a comment below</label>
+        </p>
+        <p>
+          <textarea lass= "comment-input" name="content" id=""></textarea>
+        </p>
+        <p>
+          <button class="post-com-btn">post comment</button>
+        </p>
+      </form>
+    </div>
+    <% for(let comment of comments){%>
+      <div class="comment-section">
+        <h4><%= comment.content%></h4>
+        <small><%= comment.email%></small>
+      </div>
+    <% } %>
+  </div>

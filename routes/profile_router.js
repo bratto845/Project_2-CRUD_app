@@ -8,6 +8,7 @@ const router = express.Router()
 
 router.get('/profile/:id', (req,res)=>{
     let sql = `SELECT * FROM users WHERE id = $1;`
+
      db.query(sql, [req.params.id], (err,result)=>{ 
          if(err){
              console.log(err);  
@@ -22,7 +23,6 @@ router.get('/profile/:id', (req,res)=>{
 
 router.get('/profile/:profileId/edit', ensureLoggedIn, (req, res)=>{
     const sql = `SELECT * FROM users WHERE id = $1;`
-    let user =req.params.profileId
     
      db.query(sql, [req.params.profileId], (err,result)=>{ 
          if(err){
@@ -30,7 +30,7 @@ router.get('/profile/:profileId/edit', ensureLoggedIn, (req, res)=>{
              
          }
          let profile = result.rows[0]
-         res.render('update_profile', {profile, user})
+         res.render('update_profile', {profile})
     })
 })
 
@@ -42,12 +42,12 @@ router.put('/profile/:profileId', ensureLoggedIn, (req, res) => {
     let profileId = req.params.profileId
    
     let sql= `
-    UPDATE profile
+    UPDATE users
     SET user_name = $1, 
     profile_pic = $2, 
-    pet_pic = $3
+    pet_pic = $3,
     category = $4
-    WHERE id = $5
+    WHERE id = $5;
     `
     db.query(sql, [userName, profilePicUrl, petPicUrl, category, profileId], (err,result)=>{
         if(err){

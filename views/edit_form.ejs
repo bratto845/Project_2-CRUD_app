@@ -1,26 +1,38 @@
-<h2>Update post</h2>
+<section class="form-page" >
+    <section class="form-container">
+        <div class="title"></div>
+            <p>Update post</p>
+        </div>
+        <form action="/posts/<%= post.id%>?_method=put" method ="post">
+        <div class="user-details">
 
-<form action="/posts/<%= post.id%>?_method=put" method ="post">
-    <label for="">title</label>
-    <input type="text" name ="title" value="<%= post.title %>">
+            <div class="input-box">
+                <label class="details" for="">title</label>
+                <input type="text" name ="title" value="<%= post.title %>">
+            </div>
+            <div class="input-box">
+                <label class="details" for="">image url</label>
+                <input type="text" name ="image_url" value="<%= post.image_url%>">
+            </div>
 
-    <label for="">image url</label>
-    <input type="text" name ="image_url" value="<%= post.image_url%>">
-
-    <label for="">description</label>
-    <textarea name="description" id=""><%= post.description%></textarea>
-    <div>
-        <label for="category">I joined FetchMate to:</label>
-        <select id="category">
-            <option value="socialize my dog">Socialize my dog</option>
-            <option value="meet other pet owners">Meet other pet owners</option>
-            <option value="breeding opportunities">Breeding opportunities</option>
-            <option value="vet hook-ups">Vet hook-ups</option>
-            <option value="advertise events">Advertise pet events</option>
-            <option value="show off/check out parks">Show off/check out dog parks</option>
-            <option value="shout out/ check out local pet shops">Shout out/check out local Pet shops</option>
-            <option value="explore everything">All of the cool features</option>
-        </select>
-      </div>
-    <button>update</button>
-</form>
+            <div class="input-box">
+                <label class="details" for="">description</label>
+                <textarea name="description" id=""><%= post.description%></textarea>
+            </div>
+            <div class="input-box">
+                <label class="details" for="category">I joined FetchMate to:</label>
+                <select id="category">
+                    <option value="socialize my dog">Socialize my dog</option>
+                    <option value="meet other pet owners">Meet other pet owners</option>
+                    <option value="breeding opportunities">Breeding opportunities</option>
+                    <option value="vet hook-ups">Vet hook-ups</option>
+                    <option value="advertise events">Advertise pet events</option>
+                    <option value="show off/check out parks">Show off/check out dog parks</option>
+                    <option value="shout out/ check out local pet shops">Shout out/check out local Pet shops</option>
+                    <option value="explore everything">All of the cool features</option>
+                </select>
+            </div>
+            <button class="form-btn">update</button>
+        </div>
+    </section>
+</section>

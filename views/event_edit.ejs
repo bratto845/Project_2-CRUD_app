@@ -1,9 +1,9 @@
 <section class="form-page" >
     <section class="form-container">
         <div class="title">
-            <p>Share an event</p>
+            <p>Edit your Event</p>
         </div>
-        <form action="/events" method ="post">
+        <form action="/events/<%= event.id%>?_method=put" method ="post">
             <div class="user-details">
                 <div class="input-box">
                     <label class="details" for="">Title</label>
@@ -33,7 +33,7 @@
                         <option value="shops">Shout out local Pet shops</option>
                     </select>
                 </div>
-                <button class="form-btn">Share</button>
+                <button class="form-btn">Update</button>
             </div>
         </form>
     </section>
