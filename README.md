@@ -43,9 +43,11 @@ To Do
 
 Lessons Learned 
 -------------------------------------------
-Planning and maping out routes and data bases is vital. 
-Example of poor planning...
+- Planning and maping out routes and data bases is vital. 
+- Example of poor planning...
+
 <img width="679" alt="Screenshot 2024-10-04 at 11 21 13" src="https://github.com/user-attachments/assets/d0cbb2b9-eee9-4a63-93e5-2753c7858f4e">
-One feature at a time.
-CSS boxing is your friend.
+
+- One feature at a time.
+- CSS boxing is your friend.
 
