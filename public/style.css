@@ -210,9 +210,10 @@ display: inline-block;
     color: white;
     margin-bottom: 10%;
 }
-/* .footer-text{
-   
-} */
+.footer-text-snp{
+    text-align: center;
+    align-items: center;
+}
 .footer-text button{
     background-color: #e98c60;
     color: white;

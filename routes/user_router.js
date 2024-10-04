@@ -16,6 +16,7 @@ router.post('/new_user', (req,res)=>{
     let plainTextPass= req.body.password
     let profilePicUrl= req.body.profile_pic
     let petPicUrl= req.body.pet_pic
+    let userName= req.body.user_name
     let category= req.body.category
     let saltRounds = 10
 
@@ -23,12 +24,12 @@ router.post('/new_user', (req,res)=>{
         bcrypt.hash(plainTextPass, salt, (err, hash)=>{
             const sql = `
             INSERT INTO users
-            (email, password_digest, profile_pic, pet_pic, category)
+            (email, password_digest, profile_pic, pet_pic, category, user_name)
             VALUES
-            ($1, $2, $3, $4, $5)
+            ($1, $2, $3, $4, $5, $6)
             RETURNING *;
             `
-            db.query(sql, [email, hash, profilePicUrl, petPicUrl, category],(err, result) => {
+            db.query(sql, [email, hash, profilePicUrl, petPicUrl, category, userName],(err, result) => {
                 if (err){
                     console.log(err);
                 }
